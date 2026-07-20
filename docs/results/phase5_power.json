@@ -1,0 +1,86 @@
+{
+  "rows": [
+    {
+      "config_label": "mock-a",
+      "n_iterations": 346,
+      "duration_s": 1.0,
+      "fps": 345.14,
+      "watts_per_frame": 0.5806,
+      "latency": {
+        "backend": "cpu",
+        "device": "mock-a",
+        "n": 346,
+        "n_warmup": 20,
+        "p50_ms": 3.0125,
+        "p95_ms": 3.0463,
+        "p99_ms": 3.3573,
+        "mean_ms": 2.8949,
+        "std_ms": 0.3034,
+        "min_ms": 2.0169,
+        "max_ms": 4.5766,
+        "fps": 345.44
+      },
+      "power": {
+        "device_index": 0,
+        "device_name": "MockGPU",
+        "duration_s": 9.9,
+        "sample_interval_ms": 100.0,
+        "n_samples": 100,
+        "mean_power_w": 200.41,
+        "p50_power_w": 200.37,
+        "p95_power_w": 208.46,
+        "max_power_w": 210.01,
+        "mean_temp_c": 64.4,
+        "max_temp_c": 68.0,
+        "mean_gpu_clock_mhz": 2364.0,
+        "min_gpu_clock_mhz": 2040.0,
+        "throttle_events": 10
+      },
+      "mAP_50_95": 0.531,
+      "size_mb": 0.0,
+      "backend": "mock",
+      "precision": "a"
+    },
+    {
+      "config_label": "mock-b",
+      "n_iterations": 341,
+      "duration_s": 1.0,
+      "fps": 340.41,
+      "watts_per_frame": 0.5887,
+      "latency": {
+        "backend": "cpu",
+        "device": "mock-b",
+        "n": 341,
+        "n_warmup": 20,
+        "p50_ms": 3.0173,
+        "p95_ms": 3.0369,
+        "p99_ms": 3.0497,
+        "mean_ms": 2.9351,
+        "std_ms": 0.2186,
+        "min_ms": 2.0472,
+        "max_ms": 3.0915,
+        "fps": 340.71
+      },
+      "power": {
+        "device_index": 0,
+        "device_name": "MockGPU",
+        "duration_s": 9.9,
+        "sample_interval_ms": 100.0,
+        "n_samples": 100,
+        "mean_power_w": 200.41,
+        "p50_power_w": 200.37,
+        "p95_power_w": 208.46,
+        "max_power_w": 210.01,
+        "mean_temp_c": 64.4,
+        "max_temp_c": 68.0,
+        "mean_gpu_clock_mhz": 2364.0,
+        "min_gpu_clock_mhz": 2040.0,
+        "throttle_events": 10
+      },
+      "mAP_50_95": 0.531,
+      "size_mb": 0.0,
+      "backend": "mock",
+      "precision": "b"
+    }
+  ]
+}

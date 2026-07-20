@@ -1,0 +1,6 @@
+# Runtime deps for the HF Space dashboard (hf_space/app.py) ONLY.
+# The app reads pre-computed docs/results/*.json — no torch/onnx needed here.
+# Floors match the project's pyproject.toml [ui] extras + pandas.
+streamlit>=1.39.0
+plotly>=5.24.0
+pandas>=2.2.0

@@ -1,0 +1,74 @@
+{
+  "reference": {
+    "backend": "simple",
+    "mAP_50_95": 0.0,
+    "mAP_50": 0.0,
+    "mAP_75": 0.0,
+    "n_predictions": 16,
+    "n_ground_truth": 16,
+    "n_images": 8,
+    "mAP_per_class": {
+      "class_02": 1.0,
+      "class_00": 1.0,
+      "class_01": 1.0
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "iou_mean": 1.0
+  },
+  "candidate": {
+    "backend": "simple",
+    "mAP_50_95": 0.0,
+    "mAP_50": 0.0,
+    "mAP_75": 0.0,
+    "n_predictions": 13,
+    "n_ground_truth": 16,
+    "n_images": 8,
+    "mAP_per_class": {
+      "class_02": 0.8889,
+      "class_00": 0.75,
+      "class_01": 1.0
+    },
+    "precision": 1.0,
+    "recall": 0.8125,
+    "f1": 0.8966,
+    "iou_mean": 1.0
+  },
+  "delta": {
+    "backend": "simple",
+    "reference_label": "fp32-mock",
+    "candidate_label": "int8-mock-r0.85-fp0.15",
+    "overall_mAP_50_95_ref": 0.0,
+    "overall_mAP_50_95_cand": 0.0,
+    "overall_mAP_50_ref": 1.0,
+    "overall_mAP_50_cand": 0.8966,
+    "mAP_50_95_drop": 0.0,
+    "mAP_50_drop": -0.1034,
+    "retained_mAP_50_95_pct": null,
+    "per_class": [
+      {
+        "label": "class_00",
+        "reference": 1.0,
+        "candidate": 0.75,
+        "delta": -0.25,
+        "retained_pct": 75.0
+      },
+      {
+        "label": "class_01",
+        "reference": 1.0,
+        "candidate": 1.0,
+        "delta": 0.0,
+        "retained_pct": 100.0
+      },
+      {
+        "label": "class_02",
+        "reference": 1.0,
+        "candidate": 0.8889,
+        "delta": -0.1111,
+        "retained_pct": 88.89
+      }
+    ],
+    "n_classes": 3
+  }
+}

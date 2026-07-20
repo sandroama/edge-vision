@@ -1,0 +1,37 @@
+{
+  "config": {
+    "teacher_model": "PekingU/rtdetr_r50vd_coco_o365",
+    "student_model": "PekingU/rtdetr_r18vd_coco_o365",
+    "output_dir": "checkpoints/distill_smoke",
+    "device": "auto",
+    "learning_rate": 0.001,
+    "num_epochs": 3,
+    "batch_size": 1,
+    "grad_clip": 0.1,
+    "temperature": 4.0,
+    "alpha": 0.7,
+    "seed": 0
+  },
+  "per_epoch": [
+    {
+      "epoch": 0,
+      "total": 0.011879,
+      "kd_logit": 0.011879
+    },
+    {
+      "epoch": 1,
+      "total": 0.007968,
+      "kd_logit": 0.007968
+    },
+    {
+      "epoch": 2,
+      "total": 0.005317,
+      "kd_logit": 0.005317
+    }
+  ],
+  "checkpoint_path": "checkpoints/distill_smoke/student_tiny.pth",
+  "wall_seconds": 0.39,
+  "converged": true,
+  "initial_loss": 0.011879,
+  "final_loss": 0.005317
+}

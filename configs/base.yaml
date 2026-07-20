@@ -1,0 +1,46 @@
+# edge-vision base config (Hydra-style)
+# Per-experiment overrides live as separate YAMLs in this folder.
+
+defaults:
+  - _self_
+
+# ---- model ----
+model:
+  name: rtdetr-r50            # rtdetr-r50 | rtdetr-r18 | mobilesam
+  pretrained: PekingU/rtdetr_r50vd_coco_o365
+  num_classes: 80
+  input_size: [640, 640]
+  precision: fp16             # fp32 | fp16 | int8
+
+# ---- data ----
+data:
+  coco_root: data/coco
+  val_split: val2017
+  train_split: train2017
+  num_workers: 4
+  batch_size: 1               # latency benches always use batch=1
+
+# ---- compile ----
+compile:
+  backend: torch              # torch | onnxrt-cpu | trt
+  onnx_opset: 17
+  trt_workspace_mb: 4096
+  trt_fp16: true
+  trt_int8: false
+
+# ---- quantization ----
+quantization:
+  calibration_size: 500
+  calibration_seed: 42
+  per_channel: true
+
+# ---- profiling ----
+profiling:
+  duration_sec: 60            # default; set 900 for the full 15-min sweep
+  nvml_sample_ms: 100
+
+# ---- experiment tracking ----
+tracking:
+  mlflow_dir: mlruns
+  wandb_project: edge-vision
+  enabled: false

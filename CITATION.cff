@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "edge-vision: Real-Time Detection + Segmentation on Real Hardware"
+authors:
+  - family-names: Amaglobeli
+    given-names: Sandro
+date-released: 2026-04-30
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/sandroama/edge-vision"
+keywords:
+  - object-detection
+  - segmentation
+  - tensorrt
+  - quantization
+  - knowledge-distillation
+  - edge-deployment
+  - real-time
+  - rt-detr
+  - mobilesam
+  - coco
